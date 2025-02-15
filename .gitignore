@@ -1,0 +1,12 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore compiled files
+*.log
+*.pyc

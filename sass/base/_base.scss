@@ -1,0 +1,58 @@
+@use "../abstract/" as *;
+*,
+ *::after,
+ *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border and paddings are not added to box */
+    /* by default browser apply default settings */
+  }
+
+  html{
+    font-size: 62.5%; // 1rem = 10px
+
+   
+  //  @include respond(phone) {
+  //     font-size: 50%; // 1 rem = 8px, 8/16 = 50\5
+  //   }
+  @include respond(tab-land){ // width < 900? 
+    font-size:56.25%; // 1 rem = 8px, 8/16 = 50\5
+    // In this way the smaller mediaquery will apply first. if alternate them, the bigger media query will apply. css proriority order rules.
+  }
+    @include respond(tab-port) {
+      font-size:50%;
+    }
+
+   
+    @include respond(big-desktop){
+      font-size:75%; // 1rem = 12, 12/16
+    }
+  }
+    
+//     /* border and paddings are not added to box */ 
+
+//     /* by default browser apply default settings */
+// }
+
+body{
+  box-sizing: border-box;
+  padding: 3rem;
+ 
+  
+  @include respond(tab-port) {
+    padding: 0;
+  }
+    /* it will be inherited by all child elementts */
+    // font-family: "Lato", san-serif;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 1.7;
+    // color: $color-grey-dark;
+    //  padding:30px; /*it will not be inherited */
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

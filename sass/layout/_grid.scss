@@ -1,0 +1,62 @@
+@use "../abstract/" as *;
+@use "../components/" as *;
+
+.row{
+    max-width: $grid-width;
+
+    // background-color: $color-white-darker; test!!!
+    margin: 0 auto ; // center block element in block
+ // we select everything in class raw except the last child 
+    &:not(:last-child){
+    margin-bottom: $grid-vertical-size;
+
+    @include respond(tab-port){
+      margin-bottom: $grid-vertical-small;
+    }
+
+    @include respond(tab-port){
+      max-width: 50rem;
+      padding: 0 3rem;
+    }
+
+    
+
+ }
+// this mixin fixes the height of the element. Before that the height disappeared
+ @include clearfix;
+ 
+[class^="col-"]{
+    // this ^ means pick all classes the start with col-. 
+    // One can use $ - to pick last element 
+    // one can use * to use all elements
+  
+    float:left;
+    &:not(:last-child){
+        margin-right: $grid-horizontal-size;
+
+        @include respond(tab-port){
+         margin-right: 0;
+         margin-bottom: $grid-vertical-small ;
+        }
+    }
+
+    @include respond(tab-port){
+      width: 100% !important;
+     
+    }
+
+}
+ .col-1-of-2{
+    width: calc((100% - #{$grid-horizontal-size}) /2);
+    
+ }
+ 
+ .col-1-of-3{
+    width: calc((100% - 2 * #{$grid-horizontal-size}) / 3)
+ }
+ 
+ 
+ .col-1-of-4{
+    width: calc((100% - 3 * #{$grid-horizontal-size}) / 4);
+}
+}

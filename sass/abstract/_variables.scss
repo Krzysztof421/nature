@@ -1,0 +1,47 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+$color-primary:#7ed56f;
+$color-primary-light:#7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-grey-dark-2:#504f4f;
+$color-grey-dark-3: #333;
+
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-light-1:#f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-white-darker:#eee;
+
+// cards gradient
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark:#ff7730;
+
+$color-tertiary-light:#2990ff;
+$color-tertiary-dark:#5643fa;
+
+
+
+/* make a cross browser reset */
+
+// grid
+$grid-width: 114rem;
+$grid-vertical-size: 8rem;
+$grid-vertical-small: 6rem;
+$grid-horizontal-size: 6rem;
+
+//font
+
+$default-font-size: 1.6rem;
+
